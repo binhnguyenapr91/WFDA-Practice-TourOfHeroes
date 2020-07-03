@@ -1,12 +1,13 @@
-<h3>{{hero.name|uppercase}} information</h3>
-<table>
-    <thead>
-        <th>Id</th>
-        <th>Name</th>
+<h3>{{hero.name|uppercase}} <small class="text-muted">information</small></h3>
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Edit</th>
     </thead>
     <tbody>
-        <tr>
-            <td>{{hero.id}}</td>
+        <tr *ngFor="let hero of heroes">
+            <th scope="col">{{hero.id}}</th>
             <td>{{hero.name}}</td>
             <td><input [(ngModel)]="hero.name" placeholder="name"></td>
         </tr>
@@ -15,8 +16,8 @@
 </table>
 
 <h2>My Heroes</h2>
-    <ul class="heroes1">
-        <li *ngFor="let hero of heroes">
+    <ul class="list-group">
+        <li *ngFor="let hero of heroes" class="list-group-item">
             <span class="badge">{{hero.id}}</span> {{hero.name}}
         </li>
     </ul>
