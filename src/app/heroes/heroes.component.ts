@@ -11,6 +11,10 @@ export class HeroesComponent implements OnInit {
     id:1,
     name:"Gerrard"
   };
+
+  setName(value){
+    this.hero.name = value;
+  }
   constructor() { }
 
   ngOnInit(): void {

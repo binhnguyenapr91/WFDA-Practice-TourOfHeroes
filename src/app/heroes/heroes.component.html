@@ -5,7 +5,11 @@
         <th>Name</th>
     </thead>
     <tbody>
-        <td>{{hero.id}}</td>
-        <td>{{hero.name}}</td>
+        <tr>
+            <td>{{hero.id}}</td>
+            <td>{{hero.name}}</td>
+            <td><input [(ngModel)]="hero.name" placeholder="name"></td>
+        </tr>
+        
     </tbody>
 </table>
