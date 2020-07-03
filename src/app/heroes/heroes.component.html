@@ -10,6 +10,13 @@
             <td>{{hero.name}}</td>
             <td><input [(ngModel)]="hero.name" placeholder="name"></td>
         </tr>
-        
     </tbody>
+    
 </table>
+
+<h2>My Heroes</h2>
+    <ul class="heroes1">
+        <li *ngFor="let hero of heroes">
+            <span class="badge">{{hero.id}}</span> {{hero.name}}
+        </li>
+    </ul>

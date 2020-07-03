@@ -1,5 +1,7 @@
+import { from } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import {Hero} from '../hero';
+import {HEROES} from '../mock-heros';
 
 @Component({
   selector: 'app-heroes',
@@ -7,6 +9,7 @@ import {Hero} from '../hero';
   styleUrls: ['./heroes.component.scss']
 })
 export class HeroesComponent implements OnInit {
+  heroes = HEROES;
   hero : Hero = {
     id:1,
     name:"Gerrard"
@@ -19,5 +22,4 @@ export class HeroesComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
