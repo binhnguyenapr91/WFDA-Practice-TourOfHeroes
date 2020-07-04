@@ -1,4 +1,23 @@
-<h3>{{hero.name|uppercase}} <small class="text-muted">information</small></h3>
+
+<div *ngIf="selectedHero">
+<table>
+    <tr>
+        <td colspan="2"><h3>{{selectedHero.name|uppercase}} <small class="text-muted">information</small></h3></td>
+    </tr>
+    <tr>
+        <td>Name:</td>
+        <td>{{selectedHero.name}}</td>
+    </tr>
+    <tr>
+        <td>Positon:</td>
+        <td>{{selectedHero.position}}</td>
+    </tr>
+    <tr>
+        <td>Image:</td>
+        <td><img src="{{selectedHero.image}}" alt="" style="width: 300px;height: 200px;"></td>
+    </tr>
+</table>
+</div>
 <table class="table table-hover">
     <thead class="thead-dark">
         <th scope="col">Id</th>
@@ -8,7 +27,7 @@
         <th scope="col">Edit</th>
     </thead>
     <tbody>
-        <tr *ngFor="let hero of heroes">
+        <tr *ngFor="let hero of heroes" (click)="selectHero(hero)" [class.selected]="hero === selectedHero">
             <th scope="col">{{hero.id}}</th>
             <td>{{hero.name}}</td>
             <td>{{hero.position}}</td>

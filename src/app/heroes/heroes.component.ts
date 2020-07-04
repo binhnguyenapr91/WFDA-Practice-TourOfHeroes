@@ -10,15 +10,15 @@ import {HEROES} from '../mock-heros';
 })
 export class HeroesComponent implements OnInit {
   heroes = HEROES;
-  hero : Hero = {
-    id:1,
-    name:"England FC",
-    position: 'CM',
-    image: './assets/resources/images/gerrard.png'
-  };
+  selectedHero : Hero;
+  hero:Hero;
 
   setName(value){
-    this.hero.name = value;
+    this.selectedHero.name = value;
+  }
+
+  selectHero(hero):void{
+    this.selectedHero = hero;
   }
   constructor() { }
 
