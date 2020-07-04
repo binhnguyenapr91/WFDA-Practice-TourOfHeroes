@@ -12,7 +12,9 @@ export class HeroesComponent implements OnInit {
   heroes = HEROES;
   hero : Hero = {
     id:1,
-    name:"Gerrard"
+    name:"England FC",
+    position: 'CM',
+    image: './assets/resources/images/gerrard.png'
   };
 
   setName(value){
