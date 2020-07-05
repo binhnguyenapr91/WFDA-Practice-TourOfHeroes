@@ -1,0 +1,30 @@
+<div *ngIf="hero">
+  <table>
+    <tr>
+      <td colspan="2">
+        <h3>
+          {{ hero.name | uppercase }}
+          <small class="text-muted">information</small>
+        </h3>
+      </td>
+    </tr>
+    <tr>
+      <td>Name:</td>
+      <td>{{ hero.name }}</td>
+    </tr>
+    <tr>
+      <td>Positon:</td>
+      <td>{{ hero.position }}</td>
+    </tr>
+    <tr>
+      <td>Image:</td>
+      <td>
+        <img
+          src="{{ hero.image }}"
+          alt=""
+          style="width: 300px; height: 200px;"
+        />
+      </td>
+    </tr>
+  </table>
+</div>

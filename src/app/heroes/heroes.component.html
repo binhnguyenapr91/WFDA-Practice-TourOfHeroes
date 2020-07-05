@@ -1,23 +1,6 @@
 
-<div *ngIf="selectedHero">
-<table>
-    <tr>
-        <td colspan="2"><h3>{{selectedHero.name|uppercase}} <small class="text-muted">information</small></h3></td>
-    </tr>
-    <tr>
-        <td>Name:</td>
-        <td>{{selectedHero.name}}</td>
-    </tr>
-    <tr>
-        <td>Positon:</td>
-        <td>{{selectedHero.position}}</td>
-    </tr>
-    <tr>
-        <td>Image:</td>
-        <td><img src="{{selectedHero.image}}" alt="" style="width: 300px;height: 200px;"></td>
-    </tr>
-</table>
-</div>
+    <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<hr>
 <table class="table table-hover">
     <thead class="thead-dark">
         <th scope="col">Id</th>
