@@ -11,19 +11,10 @@ import {Hero} from '../hero';
 })
 export class HeroesComponent implements OnInit {
   heroes : Hero[];
-  selectedHero : Hero;
-  hero:Hero;
 
-  setName(value){
-    this.selectedHero.name = value;
-  }
 
   getHeros():void{
     this.heroService.getHeros().subscribe(heroes => this.heroes = heroes);
-  }
-  selectHero(hero):void{
-    this.selectedHero = hero;
-    this.messageService.add('Hero Component: Selected heros id is: '+hero.id);
   }
   constructor(private heroService : HeroService, private messageService : MessageService) {
     

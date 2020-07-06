@@ -1,5 +1,5 @@
 
-    <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+
 <hr>
 <table class="table table-hover">
     <thead class="thead-dark">
@@ -10,9 +10,9 @@
         <th scope="col">Edit</th>
     </thead>
     <tbody>
-        <tr *ngFor="let hero of heroes" (click)="selectHero(hero)" [class.selected]="hero === selectedHero">
+        <tr *ngFor="let hero of heroes">
             <th scope="col">{{hero.id}}</th>
-            <td>{{hero.name}}</td>
+            <td><a routerLink="/detail/{{hero.id}}">{{hero.name}}</a></td>
             <td>{{hero.position}}</td>
             <td><img src="{{hero.image}}" alt="" style="width: 300px; height: 200px;"></td>
             <td><input [(ngModel)]="hero.name" placeholder="name"></td>
